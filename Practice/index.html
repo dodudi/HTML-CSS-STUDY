@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <h1> &lt;h1&gt; 는 제목태그입니다</h1>
+    <p> &lt;p&gt; 태그는 문단을 나타냅니다. p태그마다 각각 줄바꿈이 됩니다.</p>
+    <p> &lt;p&gt; 문단을 나타냅니다. p태그마다 각각 줄바꿈이 됩니다.</p>
+    <hr> &lt;hr&gt; 줄을 그어!
+
+    <b> &lt;b&gt; 글자만 굵어</b>
+    <strong> &lt;strong&gt; 글자 굵어, 강조!</strong>
+
+    <br>
+    <i> &lt;i&gt; 글자기울임</i>
+    <em> &lt;i&gt; 글자기울임, 강조</em>
+
+    <br>
+    <!--cite를 속성으로 쓸때 인용한 사이트 주소-->
+    <q cite="http-equiv">&lt;q&gt;짧은 인용문</q>
+    <blockquote cite="http-equiv">&lt;blockquote&gt;긴 인용문</blockquote>
+    <cite>&lt;blockquote&gt;긴 인용문</cite>
+    <br>
+    <mark>&lt;mark&gt; 사용자의 행동과 관련 있는 부분<i>(예:검색 결과, 인용문에서 주시해야할 부분 표시, css와 병행하여 사용)</i></mark>
+
+    <p>ul(unorder list)태그는 il태그와 함께 사용</p>
+    <p>ol(order list)태그는 il태그와 함께 사용</p>
+
+    <p>
+        &lt;dd, dt, dl &gt; 태그들 <br>
+        dl안에 dt, dd<br>
+        dt는 제목 dd는 정의
+    </p>
+
+    <p>&lt;img&gt;태그 -> src ="이미지주소", alt ="이미지가 안나올떄 말", title ="마우스 올렸을떄 말"</p>
+
+    <p>table -> &lt;tr&gt; -> &lt;td&gt;</p>
+
+    <table border="1px">
+        <caption>1에서 9까지 숫자들</caption>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+
+    <table border="1px">
+        <caption>1에서 9까지 숫자들</caption>
+        <thead>
+            <tr>
+                <th>과목</th>
+                <th>월</th>
+                <th>화</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>수학</th>
+                <td>1시간</td>
+                <td>2시간</td>
+            </tr>
+            <tr>
+                <th>영어</th>
+                <td>1시간</td>
+                <td>2시간</td>
+            </tr>
+            <tr>
+                <th>국어</th>
+                <td>1시간</td>
+                <td>2시간</td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>총시간</th>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <table border="1px">
+
+        <tr>
+            <td colspan=2>1</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+
+        <tr>
+            <td rowspan=3>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td colspan=2 rowspan="2">2</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+        </tr>
+
+    </table>
+
+    <table border="1px">
+        <colgroup>
+            <col class="weekend">
+            <col spawn="5">
+            <col class="weekend">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">일</th>
+                <th scope="col">월</th>
+                <th scope="col">화</th>
+                <th scope="col">수</th>
+                <th scope="col">목</th>
+                <th scope="col">금</th>
+                <th scope="col">토</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>_</td>
+            <td>_</td>
+            <td>_</td>
+            <td>_</td>
+            <td>_</td>
+            <td>_</td>
+            <td>_</td>
+        </tr>
+        <tr>
+            <td>_</td>
+            <td>_</td>
+            <td>_</td>
+            <td>_</td>
+            <td>_</td>
+            <td>_</td>
+            <td>_</td>
+        </tr>
+        <tr>
+            <td>_</td>
+            <td>_</td>
+            <td>_</td>
+            <td>_</td>
+            <td>_</td>
+            <td>_</td>
+            <td>_</td>
+        </tr>
+        <tr>
+            <td>_</td>
+            <td>_</td>
+            <td>_</td>
+            <td>_</td>
+            <td>_</td>
+            <td>_</td>
+            <td>_</td>
+        </tr>
+
+    </table>
+
+    <!--_self, _blank, _parent, _top-->
+    <p><a href="https://www.naver.com" target="_self">rr</a></p>
+
+    <!--p#target_${id:target_$}*10-->
+    <a href="#target_10">rrrr</a>
+    <p id="target_1">id:target_1</p>
+    <p id="target_2">id:target_2</p>
+    <p id="target_3">id:target_3</p>
+    <p id="target_4">id:target_4</p>
+    <p id="target_5">id:target_5</p>
+    <p id="target_6">id:target_6</p>
+    <p id="target_7">id:target_7</p>
+    <p id="target_8">id:target_8</p>
+    <p id="target_9">id:target_9</p>
+    <p id="target_10">id:target_10</p>
+
+
+    <!--연락처!!!!-->
+    <address>
+        웹사이트 주소: <a href="https://www.naver.com">나이스 주소</a><br>
+        전화 <a href="tel:010-1234-1234"></a>
+        이메일 <a href="mailto:010-1234-1234"></a>
+    </address>
+</body>
+
+</html>
