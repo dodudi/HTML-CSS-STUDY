@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <!-- autocomplete 이전에 입력한 값 보여주기-->
+    <form action="" autocomplete="off">
+
+        <label for="name">이름</label>
+        <input type="text" id="name" name="my-name">
+
+        <br><br>
+
+        <label for="age">나이</label>
+        <input type="number" id="age" name="my-age">
+
+        <br><br>
+
+        <button type="submit"> 제출 </button>
+        <button type="reset"> 초기화 </button>
+        <button type="button"> 버튼 </button>
+    </form>
+    <hr>
+
+    <form action="">
+
+        <fieldset>
+
+            <legend>반장</legend>
+            <label for="name_1">이름</label>
+            <input type="text" id="name_1" name="name_1">
+            <br><br>
+            <label for="age_1">나이</label>
+            <input type="number" id="age_1" name="age_1">
+            <br><br>
+            <button type="reset">초기화</button>
+        </fieldset>
+        <br>
+
+
+        <fieldset disabled>
+            <legend>부반장</legend>
+            <label for="name_2">이름</label>
+            <input type="text" id="name_2" name="name_2">
+            <br><br>
+            <label for="age_2">나이</label>
+            <input type="text" id="age_2" name="age_2">
+            <br><br>
+            <button type="reset">초기화</button>
+        </fieldset>
+    </form>
+    <hr>
+
+    <form action="">
+
+        <label for="txtIp">text</label>
+        <input type="text" id="txtIp" placeholder="5자 이하" maxlength="5">
+
+        <br><br>
+
+        <label for="pwdIp">password</label>
+        <input type="pwdIp" type="password" placeholder="4자 이상" minlength="4">
+
+        <br><br>
+
+        <label for="srchIp">search</label>
+        <input type="srchIp" type="search">
+
+        <br><br>
+
+        <label for="telIp">tel</label>
+        <input type="tel" id="telIp">
+
+        <br><br>
+
+        <button type="submit">적용</button>
+    </form>
+    <hr>
+
+    <form action="">
+
+        <label for="numIp">number</label>
+        <input type="number" id="numIp" name="numIp" min="0" max="10">
+        <br><br>
+
+        <label for="rglp">range</label>
+        <input type="range" min="0" max="100" step="20">
+        <br><br>
+        <!--날짜 속성 date, datetime-local, month, time, week 등-->
+        <label for="dtlp">date</label>
+        <input type="date" id="dtlp" min="2020-01-01" max="2030-12-31">
+        <br><br>
+    </form>
+    <hr>
+
+    <form action="">
+
+        <h2>checkbox</h2>
+        <input id="cbIp" type="checkbox" checked>
+        <label for="cbIp">유기농</label>
+
+        <!--name 으로 묶어야함 radio-->
+        <h2>radio</h2>
+        <input type="radio" name="fruit" id="f_apple" value="apple" checked>
+        <label for="f_apple">사과</label>
+
+        <input type="radio" name="fruit" id="f_grape" value="grape">
+        <label for="f_grape">포도</label>
+
+        <input type="radio" name="fruit" id="f_orange" value="orange">
+        <label for="f_orange">오렌지</label>
+        <br><br>
+
+        <input type="radio" name="number" id="one" value="one">
+        <label for="one">1</label>
+
+        <input type="radio" name="number" id="two" value="two" checked>
+        <label for="two">2</label>
+    </form>
+    <hr>
+
+    <form action="">
+
+        <!--accept는 처음 지정되는 확장자!, multiple은 여러파일을 한번에 올릴 수 있또록-->
+        <label for="fileIp">file</label>
+        <input type="file" id="fileIp" accept="image/png, image/jpeg" multiple>
+        <br><br>
+
+        <label for="hdnIp">hidden</label>
+        <input type="hidden" id="hdnIp">
+        <br><br>
+
+    </form>
+    <hr>
+
+    <form action="">
+
+        <label for="emailIp">email</label>
+        <input type="email" id="emailIp">
+
+        <button type="submit">제출</button>
+    </form>
+    <hr>
+
+    <form action="">
+        <label for="valIp">value</label>
+        <input type="text" id="valIp" value="지정됨">
+        <br><br>
+
+        <label for="aflp">autofocus</label>
+        <input type="text" placeholder="자동포커싱" id="aflp" autofocus>
+        <br><br>
+
+        <label for="roIp">readonly</label>
+        <input type="text" id="roIp" value="읽기만 가능, 전송됨" readonly>
+        <br><br>
+
+        <label for="disa">disabled</label>
+        <input type="text" id="disa" value="입력불가 전송 안됨" disabled>
+        <br><br>
+
+        <label for="disa">required</label>
+        <input type="text" id="disa" value="무조건 작성" required>
+        <br><br>
+
+        <input type="radio" id="apple1" name="fruit1" checked>
+        <label for="apple1">사과</label>
+
+        <input type="radio" id="orange1" name="fruit1">
+        <label for="orange1">오렌지</label>
+        <br><br>
+
+        <button type="submit">제출</button>
+    </form>
+    <hr>
+
+    <form action="">
+        <textarea name="" id="" cols="30" rows="10">기본값은 태그 컨탠츠안에!!</textarea>
+    </form>
+    <hr>
+
+    <form action="">
+
+        <label for="lang">선택</label>
+        <!--multiple은 여러개 선택가능-->
+        <select name="" id="lang" multiple>
+
+            <option value="">-- 선택 --</option>
+            <option value="a" selected>a</option>
+            <option value="b">b</option>
+            <option value="c">c</option>
+
+        </select>
+
+        <label for="shopping">쇼핑 목록</label>
+        <select name="" id="shopping">
+            <optgroup label="과일">
+                <option value="">사과</option>
+                <option value="">딸기</option>
+                <option value="">포도</option>
+            </optgroup>
+
+        </select>
+        <br><br>
+
+        <!--datalist 미리보기~-->
+        <label for="">선택</label>
+        <input id ="job" list="jobs">
+        <datalist id ="jobs">
+            <option value="학생"></option>
+            <option value="선생"></option>
+        </datalist>
+
+    </form>
+    <hr>
+
+    <form action="">
+        <!--javascript랑...-->
+        <progress id="progressBar" max="100" value="50">10%</progress>
+        <!-- optimum에 가까울소록 초록색!!-->
+        <meter min ="0" max="100" low="33" high="66" optimum="100" value ="0"></meter>
+        <meter min ="0" max="100" low="33" high="66" optimum="100" value ="50"></meter>
+        <meter min ="0" max="100" low="33" high="66" optimum="100" value ="75"></meter>
+        <meter min ="0" max="100" low="33" high="66" optimum="100" value ="100"></meter>
+    </form>
+
+    <!-- 잘쓰이지않아-->
+    <pre>
+    탭까지 적용되내;; ㅁㄴㅇㄻㄴ ㅁㄴㅇㄻㄴㅇㄻㄴㅇㄹ ㅁㄴㅇㄹ ㅁㄴㅇㄹ ㅁㄴㅇㄹ ㅁㄴㅇㄹ
+    </pre>
+
+    <iframe src="https://www.naver.com" frameborder="0"></iframe>
+</body>
+
+</html>
