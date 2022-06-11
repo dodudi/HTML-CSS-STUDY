@@ -1,0 +1,18 @@
+span{
+    /*기본 inline*/
+    background-color :blueviolet;
+}
+
+div{
+    /*기본 block*/
+    width:250px;
+    height: 100px;
+    background-color: aquamarine;
+}
+
+ul > li{
+    background-color: red;
+    display: inline-block;
+    margin-right: 2em;
+    padding: 8px;
+}

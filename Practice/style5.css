@@ -1,0 +1,33 @@
+.test1{
+    font-style: italic;
+    font-weight: normal;
+}
+
+
+.test2{
+    font-style: normal;
+}
+
+.test3{
+    font-style: oblique;
+}
+
+.test4{
+    font-style: initial;
+}
+
+.test5{
+    font-weight: bold;
+}
+.test6{
+    font-weight: bolder;
+}
+.test7{
+    font-weight:lighter;
+}
+.test8{
+    font-weight: 500;
+}
+.test9{
+    font-weight: 900;
+}

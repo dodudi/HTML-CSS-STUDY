@@ -1,0 +1,16 @@
+.keyword {
+    color: red;
+}
+
+.rgba {
+    color:rgba(255, 50, 100, 0.5);
+}
+
+.hex {
+    color: #115511;
+
+}
+
+.hsl {
+    color:rgba(85, 255, 0, 0.8)
+}
