@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    height:1024px;
+}
+
+
+section {
+    width: 518px;
+    height: 518px;
+    background-color: red;
+    padding: 12px 0 0 12px;
+    position: relative;
+}
+
+div {
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    margin:0 8px 5px 0;
+    background-color: skyblue;
+}
+
+.test2{
+    position: fixed;
+    background-color: yellow;
+}
+.test3{
+    top:0;
+    left:0;
+    position: absolute;
+    background-color: green;
+}
+
+.test4{
+    top:20px;
+    left:20px;
+    position: relative;
+    background-color: violet;
+}

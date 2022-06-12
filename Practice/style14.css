@@ -1,0 +1,50 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#header {
+    display: flex;
+    align-items: flex-end;
+    flex-basis: 100px;
+    padding: 12px;
+    background-color: dodgerblue;
+    gap:12px;
+}
+
+#header>* {
+    background-color: yellow;
+    padding: 12px 0;
+    text-align: center;
+}
+
+#header>*:first-child {
+    flex-basis: 100px;
+}
+
+#header>*:last-child {
+    flex-grow: 1;
+}
+
+#main {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer {
+    flex-basis: 60px;
+    background-color: tomato;
+}
+
+
+#content{
+    padding:24px;
+    background-color: skyblue;
+}
+
+p {
+    display: none;
+}

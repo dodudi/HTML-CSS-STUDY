@@ -1,0 +1,29 @@
+
+
+.rr{
+    margin : 24px auto;   
+    width: 240px;height: 160px;
+    box-shadow: 5px 5px black;
+}
+
+
+.test1 li{
+    border-bottom: 1px solid red;
+}
+.test1 li:nth-child(2){
+    border-left: 1px solid blue;
+}
+.test1 li:nth-child(3){
+    border-right: 1px solid green;
+}
+
+.test2{
+    width:200px;
+    height:200px;
+    background-color: green;
+    border: 5px  solid red;
+    border-radius: 50%;
+    box-shadow: inset 5px 5px 5px 0.5px black;
+}
+
+

@@ -1,0 +1,31 @@
+
+
+.outer{
+    width: 200px; height: 200px;
+    background-color: aqua;
+    border-radius: 50%;
+    /*사진이 밖으로 튀어나가지 않도록*/
+    overflow: hidden;
+}
+
+.inner{
+    background-image: url(./index11.png);
+    height:100%;
+    background-size: cover;
+    background-position: top;
+}
+
+
+.test1{
+    width:500px;
+    height:300px;
+    background-color: antiquewhite;
+}
+
+.test1>div{
+    width: 100%;
+    height : 100%;
+    background-image: url(./index11.png);
+    background-size: cover;
+    background-position: center;
+}

@@ -11,27 +11,46 @@
 
 
 <body>
+    <table class="test1">
+        <tr>
+            <td>속성</td>
+            <td>너비</td>
+            <td>width, height</td>
+            <td>가로공간</td>
+            <td>margin</td>
+            <td>padding</td>
+        </tr>
 
-    <p>
+        <tr>
+            <td>inline</td>
+            <td>컨텐츠만큼</td>
+            <td>무시</td>
+            <td>공유</td>
+            <td>가로만 적용</td>
+            <td>가로만 적용, 세로는 배경색</td>
+        </tr>
+        <tr>
+            <td>inline-block</td>
+            <td>컨텐츠만큼</td>
+            <td>적용</td>
+            <td>공유</td>
+            <td>모두적용</td>
+            <td>모두적용</td>
+        </tr>
+        <tr>
+            <td>block</td>
+            <td>부모만큼</td>
+            <td>적용</td>
+            <td>가로공간 독점</td>
+            <td>모두적용(상하상쇄)</td>
+            <td>모두적용</td>
+        </tr>
+    </table>
+    <br><br>
 
-        inline는 (너비 -> 컨텐츠만큼), (width,height 무시), (가로공간 공유), (margin 가로만 적용), (padding 가로만, 세로는 배경색만)<br>
-        inline-block (너비는 컨텐츠만큼), (width, height는 적용), (가로공간 공유), (margin 모두적용), (padding 모두)<br>
-        block (너비는 부모만큼), (width, height 적용), (가로공간 독점), (margin 모두적용(상하상쇄)), (padding 모두)<br>
+    <span>spawn은 기본적으로 display가 inline입니다.</span>
+    <div>div는 기본적으로 block입니다.</div>
 
-    </p>
-
-    <span>span 요소</span>
-
-    <div>div</div>
-
-    <span>span 요소</span>
-    <span>span 요소</span>
-    <span>span 요소</span>
-    <span>span 요소</span>
-
-    <div>div</div>
-    <div>div</div>
-    <div>div</div>
     텍스트 사이에 들어있는 <span>span</span> 입니다.
 
     <div>
@@ -40,10 +59,9 @@
 
     </div>
 
-    <span>span 요소 안에 들어있는 <div>div 요소</div>입니다.</span><br>
+    <span>span 요소 안에 들어있는 asdfads <div>div 요소</div>입니다.</span><br>
 
     <ul>
-
         <li>1</li>
         <li>2</li>
         <li>3</li>
