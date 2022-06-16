@@ -13,66 +13,76 @@
 <body>
     <p>
         flex 레이아웃
+        <h1>display</h1>
+        flex로 지정을 하면 flex방식으로 자식 요소들을 배치한다.<br>
+        flex와 inline-flex가 있다<br>
 
-        display를 flex로 지정하면 플렉스 방식으로 자식 요소들을 배치한다.<br>
-        inline-flex는 해당 컨테이너 요소를 인라인으로 만든다는 차이가 있다.<br>
+        <h1>flex-direction</h1>
+        아이템들이 배치되는 축의 방향을 결정하는 속성입니다.<br>
+        row(가로로), column(세로로), row-reverse(가로역순), column-reverse(세로역순)가 있다.<br>        
 
-        flex-direction은 내부 요소(아이템)들을 어느 축(가로 또는 세로)를<br>
-        이 값에 따라 justify-content, align-items, align-content 등의<br>
-        속성들이 작용할 방향이 결정됩니다.<br>
+        <h1>flex-wrap</h1>
+        내부 요소가 컨테이너를 넘어갈 때 처리 방식을 정합니다.<br>
+        nowrap(삐쳐나옴), wrap(아래로), wrap-reverse가 있다.<br>
 
-        flex-wrap은 내부 요소의 개수 x길이가 컨테이너를 넘어갈 때 이들을 <br>
-        여러 줄에 걸쳐 나열할지 여부를 정합니다.<br>
+        <h1>flex-flow</h1>
+        flex-direction과 felx-wrap을 한번에 설정가능한 속성.<br>
+        -> flex-flow: row wrap 등으로 사용한다.<br>
 
-        justify-content는 메인 축에서 아이템들을 정렬할 방식을 정합니다.<br>
-        flex-start(end)는 row(column)-reverse의 영향을 받는다는 점에서<br>
-        start(end)와 다르다. flex-가 붙은것을 사용하자<br>
+        <h1>justify-content</h1>
+        메인축 방향 정렬입니다.<br>
+        flex-start(시작점), 
+        flex-end(끝점), 
+        center(중앙), 
+        space-between(아이템 사이에 균일한 간격), 
+        space-around(아이템 양 옆으로), 
+        space-evenly(아이템 양 옆으로 균일)가 있다<br>
 
-        align-items는 수직 축(메인축의 반대) 에서 아이템들을 정렬할 방식을 정함.<br>
-        wrap으로 아이템이 여러 줄이 되면 align-content를 사용해서 <br>
-        보다 다양한 방식으로 정렬이 가능하다.<br>
+        <h1>align-items</h1>
+        수직축 방향 정렬<br>
+        stretch(수직축 방향으로 끝까지 늘어남), 
+        flex-start(시작점), 
+        flex-end(끝점), 
+        center(가운데), 
+        baseline(텍스트 베이스라인 기준으로)가 있다.<br>
+
+        <h1>align-content</h1>
+        flex-wrap: wrap이 설정된 상태에서, 아이템들의 행이 2줄 이상 되었을 때의 수직축 방향 정렬을 결정하는 속성입니다.<br>
+        stretch, flex-start, flex-end, center, space-between, space-around, space-evenly<br>
+
+        <h1>flex-basis</h1>
+        flex 아이템의 기본 크기 설정.
+        auto, 0, 50%, 300px, 10rem, content<br>
+
+        <h1>flex-grow</h1>
+        아이템이 felx-basis의 값보다 커질 수 있는지 설정하는 속성<br>
+        0보다 큰 값이면 아이템이 유연한 박스로 변하고 원래의 크기보다 커지며 빈공간을 메운다.
+        1:2:1 등등 비율로 설정<br>
+
+        <h1>flex-shrink</h1>
+        flex-grow와 쌍을 이루는 속성으로, 아이템이 flex-basis의 값보다 작아질 수 있는지 결정합니다.<br>
+        얼마든 일단 0보다 큰 값이 세팅이 되면 해당 아이템이 유연한 박스로 변하고 flex-basis보다 작아진다.<br>
+        0으로 설정되면 아이템의 크기가 flex-basis보다 작아지지 않아.<br>
+        기본값이 1이다.<br>
+
+        <h1>flex</h1>
+        flex-grow, flex-shrink, flex-basis를 한 번에 사용 가능한 속성<br>
+        felx: 1 1 auto; -> felx-grow: 1; flex-shrink:1; flex-basis:auto
+
+        <h1>align-self</h1>
+        align-items의 아이템 버전. align-items가 전체 아이템의 수직축 정렬이면, 이것은 해당 아이템의 수직충 방향 정렬<br>
+        auto, stretch, flex-start, flex-end, center, baseline<br>
+
+        <h1>order</h1>
+        아이템들의 나열 순서 결정하는 속성<br>
+        작은 숫자일 수록 먼저 배치.
+
+        <h1>z-index</h1>
+        z축 정렬을 할 수 있다 숫자가 클수록 위로 올라간다.<br>
 
         gap속성으로는 아이템 간에 간격을 줄 수 있으며 두 개의 값을 넣어서<br>
         가로 간격과 세로간격을 다르게 지정하는것도 가능하다.<br>
     </p>
-
-    <p>
-        flex 컨테이너<br>
-        flex-basis는 메인 축상의 길이로, 컨테이너의 flex-direction 값에<br>
-        따라 너비 또는 높이값으로 작용한다. 기본값은 auto<br>
-
-        flex-grow는 빈 공간을 채울지 여부, 그리고 채울 시 다른 아이템들의<br>
-        동 속성값에 비례해서 공백을 나눠갖는다. 기본값은 0<br>
-
-        flex-shrink는 전체 공간이 부족할 때, 해당 아이템의 길이가<br>
-        컨텐츠의 너비 또는 flex-basis로 지정한 값보다 작아질 수 있을지를 지정한다.<br>
-        기본값은 1이며, 증가할수록 길이가 많이 줄어든다.<br>
-
-        위 속성들은 아래와 같이 flex속성으로 한줄에 나타낼 수 있다.<br>
-        flex(flex-grow 값)<br>
-        flex(flex-grow 값)(flex-basis 값)<br>
-        flex(flex-grow 값)(flex-shrink 값)(flex-basis 값)<br><br>
-    </p>
-
-
-
-    <div id="container">
-        <div id="header">
-            <div>로고</div>
-            <div>메뉴들</div>
-        </div>
-        <div id="left_side">
-            <div id="left_content"> 오오</div>
-        </div>
-        <div id="main">
-            <div id="content">
-                부모의 한가운데 배치
-            </div>
-        </div>
-        <div id="footer">
-
-        </div>
-    </div>
 </body>
 
 </html>
