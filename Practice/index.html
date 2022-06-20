@@ -10,191 +10,117 @@
 
 
 <body>
-    <h1> &lt;h1&gt; 는 제목태그입니다</h1>
-    <p> &lt;p&gt; 태그는 문단을 나타냅니다. p태그마다 각각 줄바꿈이 됩니다.</p>
-    <p> &lt;p&gt; 문단을 나타냅니다. p태그마다 각각 줄바꿈이 됩니다.</p>
-    <hr> &lt;hr&gt; 줄을 그어!
-
-    <b> &lt;b&gt; 글자만 굵어</b>
-    <strong> &lt;strong&gt; 글자 굵어, 강조!</strong>
-
-    <br>
-    <i> &lt;i&gt; 글자기울임</i>
-    <em> &lt;i&gt; 글자기울임, 강조</em>
-
-    <br>
-    <!--cite를 속성으로 쓸때 인용한 사이트 주소-->
-    <q cite="http-equiv">&lt;q&gt;짧은 인용문</q>
-    <blockquote cite="http-equiv">&lt;blockquote&gt;긴 인용문</blockquote>
-    <cite>&lt;blockquote&gt;긴 인용문</cite>
-    <br>
-    <mark>&lt;mark&gt; 사용자의 행동과 관련 있는 부분<i>(예:검색 결과, 인용문에서 주시해야할 부분 표시, css와 병행하여 사용)</i></mark>
-
-    <p>ul(unorder list)태그는 il태그와 함께 사용</p>
-    <p>ol(order list)태그는 il태그와 함께 사용</p>
-
+    <h1>h1 태그</h1>
     <p>
-        &lt;dd, dt, dl &gt; 태그들 <br>
-        dl안에 dt, dd<br>
-        dt는 제목 dd는 정의
+        제목 태그입니다.
     </p>
 
-    <p>&lt;img&gt;태그 -> src ="이미지주소", alt ="이미지가 안나올떄 말", title ="마우스 올렸을떄 말"</p>
+    <h1>p 태그</h1>
+    <p>
+        p태그는 문단을 나타냅니다.<br> 
+        p태그 마다 각각 줄바꿈이 됩니다.
+    </p>
 
-    <p>table -> &lt;tr&gt; -> &lt;td&gt;</p>
+    <h1>hr 태그</h1>
+    <p>
+        hr태그는 줄을 그어줍니다.
+    </p>
 
-    <table border="1px">
-        <caption>1에서 9까지 숫자들</caption>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-        </tr>
-    </table>
+    <h1>b 태그</h1>
+    <p>
+        b태그는 글자가 굵어집니다.
+    </p>
 
-    <table border="1px">
-        <caption>1에서 9까지 숫자들</caption>
-        <thead>
-            <tr>
-                <th>과목</th>
-                <th>월</th>
-                <th>화</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>수학</th>
-                <td>1시간</td>
-                <td>2시간</td>
-            </tr>
-            <tr>
-                <th>영어</th>
-                <td>1시간</td>
-                <td>2시간</td>
-            </tr>
-            <tr>
-                <th>국어</th>
-                <td>1시간</td>
-                <td>2시간</td>
-            </tr>
+    <h1>strong 태그</h1>
+    <p>
+        strong 태그는 글자가 굵어집니다.<br>
+        강조할 때 사용하면 좋습니다.
+    </p>
 
-        </tbody>
-        <tfoot>
-            <tr>
-                <th>총시간</th>
-                <td>8</td>
-                <td>9</td>
-            </tr>
-        </tfoot>
-    </table>
+    <h1>i 태그</h1>
+    <p>
+        i 태그는 글자를 기울입니다.
+    </p>
 
-    <table border="1px">
+    <h1>em 태그</h1>
+    <p>
+        em 태그는 글자를 기울임니다.<br> 
+        강조할 떄 사용합니다.
+    </p>
 
-        <tr>
-            <td colspan=2>1</td>
-            <td>3</td>
-            <td>4</td>
-        </tr>
+    <h1>q 태그</h1>
+    <p>
+        짧은 인용문에 사용합니다.<br>
+        cite를 속성으로 쓸때 인용한 사이트 주소를 적어줍니다.
+    </p>
+    <h1>blockquote 태그</h1>
+    <p>
+        blockqute 태그는 긴 인용문에 사용합니다.<br>
+         cite 속성이 있습니다.<br>
+    </p>
 
-        <tr>
-            <td rowspan=3>5</td>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-        </tr>
+    <h1>mark 태그</h1>
+    <p>
+        mark 태그는 사용자의 행동과 관련 있는 부분에 사용된다.<br>
+        예를 들어 검색 결과, 인용문에서 주시해야할 부분, css와 병행하여 사용합니다.
+    </p>
 
-        <tr>
-            <td>1</td>
-            <td colspan=2 rowspan="2">2</td>
-        </tr>
+    <h1>ul태그</h1>
+    <p>
+        ul태그는 li와 함께 사용합니다.<br>
+        목록을 나타내줍니다.<br>
+    </p>
 
-        <tr>
-            <td>2</td>
-        </tr>
+    <h1>ol태그</h1>
+    <p>
+        ol태그는 li와 함께 사용합니다.<br>
+        목록을 나타내줍니다.
+    </p>
 
-    </table>
+    <h1>dd, dt, dl 태그</h1>
+    <p>
+        dl 안에 dt, dd를 정의한다.<br>
+        dt는 제목이며 dd는 목록입니다.
+    </p>
 
-    <table border="1px">
-        <colgroup>
-            <col class="weekend">
-            <col spawn="5">
-            <col class="weekend">
-        </colgroup>
-        <thead>
-            <tr>
-                <th scope="col">일</th>
-                <th scope="col">월</th>
-                <th scope="col">화</th>
-                <th scope="col">수</th>
-                <th scope="col">목</th>
-                <th scope="col">금</th>
-                <th scope="col">토</th>
-            </tr>
-        </thead>
-        <tr>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-        </tr>
-        <tr>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-        </tr>
-        <tr>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-        </tr>
-        <tr>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-        </tr>
+    <h1>img 태그</h1>
+    <p>
+        src ="이미지 주소"<br>
+        alt ="이미지가 나오지 않을때"<br>
+        title ="마우스 올렸을 때 말"<br>
+    </p>
 
-    </table>
+    <h1>table 태그</h1>
+    <p>
+        tr -> (th, td)를 사용한다.<br>
+        th, td는 colspan과 rowspan로 행과 열을 병합할수 있다.<br>
 
-    <!--_self, _blank, _parent, _top-->
-    <p><a href="https://www.naver.com" target="_self">rr</a></p>
+    </p>
 
-    <!--p#target_${id:target_$}*10-->
-    <a href="#target_10">rrrr</a>
-    <p id="target_1">id:target_1</p>
-    <p id="target_2">id:target_2</p>
-    <p id="target_3">id:target_3</p>
-    <p id="target_4">id:target_4</p>
-    <p id="target_5">id:target_5</p>
-    <p id="target_6">id:target_6</p>
-    <p id="target_7">id:target_7</p>
-    <p id="target_8">id:target_8</p>
-    <p id="target_9">id:target_9</p>
-    <p id="target_10">id:target_10</p>
+    <h1>catpion 태그</h1>
+    <p>
+        table태그안에 사용가능.<br>
+        범례.<br>
+    </p>
+
+    <h1>thead, tbody, tfoot 태그</h1>
+    <p>
+        table 태그 안에 사용가능.<br>
+        thead -> tr -> (tr,td)
+    </p>
+
+    <h1>colgroup 태그</h1>
+    <p>
+        table 태그 안에 사용가능.<br>
+    </p>
+
+    <h1>a 태그</h1>
+    <p>
+        링크 가능하다.<br>
+        href = "링크"<br>
+        target = "_self"(_blank, _parent, _top 등)<br>
+        id를 이용해서 원하는 곳으로 이동하는것도 가능하다.(href="#id")<br>
+    </p>
 
 
     <!--연락처!!!!-->
