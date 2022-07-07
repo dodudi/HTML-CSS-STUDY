@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            display: inline-block;
+            padding: 5px;
+            color: white;
+            background: olivedrab
+        }
+
+        div#translate{
+            transform: translateY(100px);
+        }
+
+        div#translate:hover{
+            transform: translate(50px, 200px);
+        }
+
+
+        
+        div#scale:hover{
+            transform:scale(4,2);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <body>
+        <h1>다양한 Transform</h1>
+        아래는 이동이 적용딥니다.
+        또한 마우스를 올리면 추가적 변환이 일어납니다.
+        <hr>
+        <br><br><br>
+        <div id="translate">translateY(100px)->translate(50px, 200px)</div>
+
+        <div id="scale0">scale(2,2)->scale(4,2)</div>
+        <div id="scale">scale(2,2)->scale(4,2)</div>
+    </body>
+
+</body>
+
+</html>

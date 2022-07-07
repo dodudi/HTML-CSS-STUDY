@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+        alert("자바스크립트 안녕~~!!");
+        document.write("Hello, welcome to the JaaScript world!<br>");
+        console.log("콘솔 s");
+
+
+        /*
+            -식별자(자바스크립트에서 이름을 붙힐 때 사용하는 단어) 규칙
+            첫글자는 -> (알파벳, _, $) 만가능
+            특수문자는 _와 $만 허용.
+
+        */
+
+        var name = "홍길동", alias = "자바스크립트";
+        document.write(name + "<br>");
+        document.write(alias + "<br>");
+
+        document.write(typeof (name) + "<br>");
+        document.write(typeof (alias) + "<br>");
+        document.write(typeof alias + "<br><hr>");
+
+        var start = 0, end = 123.45;
+        document.write(start + "<br>");
+        document.write(end + "<br>");
+        document.write(typeof (start) + "<br>");
+        document.write(typeof (end) + "<br><hr>");
+
+        var functionVar = function () {
+            alert('오늘도 수고하셨습니다.~~~');
+        };
+
+        document.write(functionVar + "<br>");
+        document.write(typeof (functionVar) + "<br><hr>");
+        functionVar();
+
+        var objectVar = {};
+        document.write(objectVar + "<br>");
+        document.write(typeof (objectVar) + "<br>");
+
+        var objectVar2 = new Object();
+        document.write(objectVar2 + "<br>");
+        document.write(typeof (objectVar2) + "<br>");
+
+        var objectVar2 = null;
+        document.write(objectVar2 + "<br>");
+        document.write(typeof (objectVar2) + "<br><hr>");
+
+        var noVar;
+        document.write(noVar + "<br>");
+
+        document.write(typeof (noVar) + "<br>");
+        document.write(typeof (a));
+
+        var a = "3";
+        var b = 2;
+
+        var c = b + 5 + a;
+        document.write("c= " + c + "<br>");
+        document.write(typeof c + "<br>");
+
+        var d = a + b + 1;
+        document.write("d = " + d + "<br>");
+        document.write('Number("3") + 2 + 1 = ' + (Number(a) + b + 1) + "<hr>");
+    </script>
+
+</body>
+
+</html>

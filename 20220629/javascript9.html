@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+        function callTenTimes(callback) {
+            callback(1);
+            callback(2);
+            callback(3);
+            callback(4);
+            callback(5);
+            callback(6);
+            callback(7);
+            callback(8);
+            callback(9);
+            callback(10);
+        }
+
+        var test = function (index) {
+            alert("nice" + index);
+        }
+
+        callTenTimes(test);
+
+    </script>
+
+</body>
+
+</html>

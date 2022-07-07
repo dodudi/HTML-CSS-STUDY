@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #title:hover {
+            border: thick double blue;
+            padding: 4px;
+            background-color: yellow;
+            font-size: xx-large;
+
+            transition: border 4s, background-color 8s;
+        }
+
+        #strawberry {
+            position: absolute;
+            top: 10px;
+            right: 60px;
+        }
+
+        #strawberry:hover {
+            border: 3px solid red;
+            width: 108px;
+            height: 132px;
+        }
+
+        @keyframes w3cMove {
+            from {
+                left: 0px;
+            }
+
+            to {
+                left: 200px;
+            }
+        }
+
+        @keyframes sway {
+            0% {
+                background: white;
+                top: 70px;
+                left: 20px;
+            }
+
+            100% {
+
+                background: bisque;
+                top: 7111px;
+                left: 202px;
+            }
+        }
+        #w3cMove{
+            animation:w3cMove 6s 2;
+            position: relative;
+        }
+        #title{
+            display: inline-block;
+            width:100px; height:3em; line-height: 3em;
+            text-align: center; border-radius: 50%;
+            animation: sway 6s 2;
+            position: relative;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <body>
+
+        <h3>새로운 문서 표준 <span id="title">HTML5</span> </h3>
+        <img src="Strawberry.png" id="strawberry" width="74px" height="66px">
+        <p>aaweffffffffffffffffffffffffffffffffffffwkakwefkaweklfaldkflasdlkvajdlskvjaklfdjvklavk</p>
+
+    </body>
+
+</body>
+
+</html>

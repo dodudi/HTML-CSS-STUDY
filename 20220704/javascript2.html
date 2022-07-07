@@ -1,0 +1,87 @@
+<!--
+
+    디폴트 이벤트 : 일부 html 태그는 이미 이벤트 리스터가 존재한다.
+    이러한 것을 디폴트 이벤트라고 합니다.
+    예를 들어 a태그는 클릭하면 다른 페이지로 이동한다. 이것이 기본 이벤트이다.
+    submit도 누르면 새로고침되는것이 이벤트이다.
+
+    obj.onsubmit = function(){
+        return false;
+    }
+
+    event.preventDefault()를 사용하는 경우
+    <a href ="http://www.naver.com" onclick = "event.preventDefault()">
+    
+    function whenSubmit(){
+           return false;
+       }
+    
+    <form onsubmit = "return whenSubmit()">
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <script>
+
+        function whenSubmit() {
+            var pwcheck = document.getElementById("pwcheck");
+            var nice = document.getElementById("nice");
+
+            var check = pwcheck.value == pw.value
+            return check;
+        };
+
+        function check() {
+            var id = document.getElementById("id");
+            var pw = document.getElementById("pw");
+            var pwcheck = document.getElementById("pwcheck");
+            var nice = document.getElementById("nice");
+
+            if (id.value == "") {
+                alert("이름을 입력하세요.");
+                id.focus()
+            }
+
+            if (pw.value == "") {
+                alert("비밀번호를 입력하세요.");
+                pw.focus();
+            }
+
+            if (pwcheck.value == "") {
+                alert("비밀번호 확인을 입력하세요.");
+                pw.focus();
+            }
+
+
+            if (pwcheck.value == pw.value) {
+                alert("성공");
+            } else {
+                alert("비밀번호가 다릅니다.");
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <form onsubmit="return whenSubmit()" action="javascript1.html" id="nice">
+        <input type="text" id="id" focus>
+        <input type="text" id="pw">
+        <input type="text" id="pwcheck">
+        <input onclick="check()" id="sb" type="submit"> nice
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <script>
+
+        window.onload = function () {
+            var data = ['penguins.jpg', 'Jellyfish.jpg'];
+            var img = document.getElementById('flower');
+            var index = 0;
+
+            img.onclick = function () {
+                var path = data[index];
+                this.src = path;
+
+                index++;
+
+                if (index % data.length == 0)
+                    index = 0;
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    이미지를 클릭하면 이미지가 바뀝니다. <br>
+    <img src="Penguins.jpg" id="flower" width="500px" height="500px">
+
+</body>
+
+</html>

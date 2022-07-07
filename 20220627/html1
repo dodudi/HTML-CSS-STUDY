@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h3 {
+            color: red;
+            background-color: chartreuse;
+        }
+
+        h3::after {
+            content: " (@sblim)";
+            font-size: 10pt;
+        }
+
+        #first {
+            background-image: url(image/flower.jpg);
+            background-repeat: repeat-x;
+        }
+
+        #second {
+            background-image: url(image/flower.jpg);
+        }
+
+        #third {
+            background-image: url(image/flower.jpg);
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h3> CSS 배경 관련 속성</h3>
+    <table board="1">
+
+        <tr>
+
+            <td id="first">
+                배경이미지<br>&bull; url(파일경로)<br><br>
+                &bull; background-reapeat : <br> &nbsp; -> repeat-x;
+            </td>
+            <td id="second">
+                배경이미지<br>&bull;
+                background-reapeat : no-reapeat;
+            </td>
+            <td id="third">
+                배경이미지<br>&bull;
+                background-position : center bottom;
+            </td>
+
+        </tr>
+
+    </table>
+
+</body>
+
+</html>

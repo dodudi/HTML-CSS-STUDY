@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+        var saram = new Object();
+        var saram2 = {
+            'name': "나최고",
+            "age": 25,
+            ki: 170.2,
+            print: function () {
+                var list = "";
+                for (var p in saram) {
+                    if (p != 'print')
+                        list += p + '=' + saram[p] + "<br>";
+                }
+
+                list += "<hr>";
+                document.body.innerHTML = list;
+            }
+        }
+        saram2.print();
+        
+        saram.name = "나최고";
+        saram.age = 25;
+        saram.ki = 170.2;
+        saram.blood = "A";
+        saram.address = "서울시 강남구";
+
+        document.write(saram.name + "<br>");
+
+        saram.print = function () {
+            var list = "";
+            for (var p in saram) {
+                if (p != 'print')
+                    list += p + '=' + saram[p] + "<br>";
+            }
+
+            list += "<hr>";
+            document.body.innerHTML = list;
+        }
+
+        with (saram) {
+            document.write(name + "<br>");
+        }
+
+        for (var p in saram) {
+            document.write(p + " " + saram[p] + "<br>");
+        }
+
+        delete saram.address;
+
+        for (var p in saram) {
+            document.write(p + " " + saram[p] + "<br>");
+        }
+    </script>
+
+</body>
+
+</html>

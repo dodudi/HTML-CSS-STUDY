@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .change {
+            color: red;
+            background: yellow;
+            width: 200px;
+            height: 50px;
+            font-size: 16px;
+        }
+    </style>
+
+    <script>
+        window.onclick = function () {
+            var dom = document.getElementById('username');
+
+            alert(dom.value);
+
+            var newValue = prmpt("이름을 입력하세요");
+
+            dom.value = newValue;
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+
+        var input = document.getElementById('username');
+        alert(input.value);
+
+        var name = prompt("이름을 입력하세요");
+        input.value = name;
+        input.style.color = "red";
+        input.style.backgroundColor = "yellow";
+
+
+    </script>
+    이름 : <input id="username" type="text" value="사용자의 이름 :L2">
+</body>
+
+
+</html>

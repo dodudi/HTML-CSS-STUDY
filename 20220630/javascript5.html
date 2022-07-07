@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <script>
+        window.onclick = function () {
+            var headers = document.getElementsByTagName('h1');
+            console.log("h1 문서 객체의 객수 = " + headers.length);
+
+            headers[0].innerHTML = 'headers[0]: with getElementsByTagName';
+            headers[1].innerHTML = 'headers[1]: with getElementsByTagName';
+
+            var input = document.getElementsByName('age');
+            input[0].value = '24살입니다.';
+            input[0].style.color = 'green';
+            input[1].focus();
+            input[1].style.background = 'orange';
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="header-1">윈도우를 클릭하면 변경합니다.</h1>
+    <h1 id="header-2">윈도우를 클릭하면 변경합니다.</h1>
+
+    <input type="text" name="age" value="1">
+    <input type="text" name="age" value="2">
+</body>
+
+</html>

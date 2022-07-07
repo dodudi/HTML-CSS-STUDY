@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        tr:first-child {
+            background-color: lightgray;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <script>
+        var today = new Date();
+
+        var a = today.getFullYear();
+        var b = today.getMonth() + 1;
+        var c = today.getDate();
+        var d = today.getDay();
+        var e = today.getHours();
+        var f = today.getMinutes();
+        var g = today.getSeconds();
+        var h = today.getMilliseconds();
+        var i = today.getTime();
+        var j = today.toLocaleString();
+
+        document.write(typeof (today) + "<br>");
+        document.write(a + "<br>");
+        document.write(b + "<br>");
+        document.write(c + "<br>");
+        document.write(d + "<br>");
+        document.write(e + "<br>");
+        document.write(f + "<br>");
+        document.write(g + "<br>");
+        document.write(h + "<br>");
+        document.write(i + "<br>");
+        document.write(j + "<br>");
+
+
+        var start = today.getTime();
+        var sum = 0;
+        for (var i = 0; i < 100000000; i++) {
+            sum += i;
+        }
+        var end = new Date();
+        var t1 = end.getTime();
+        document.write("Timer sum : " + (t1 - start));
+
+        document.write("sin(60도) = " + Math.sin(Math.PI / 3) + "<br>");
+        document.write("ceil(4.3) 올림 : " + Math.ceil(4.3) + "<br>");
+        document.write(Math.ceil(-4.3));
+
+        document.write(Math.floor(4.5) + "<br>");
+        document.write(Math.floor(-4.5) + "<br>");
+
+        document.write(Math.round(4.5) + "<br>");
+        document.write(Math.round(-4.5) + "<br>");
+
+        console.log(Number.MAX_VALUE);
+    </script>
+</body>
+
+</html>

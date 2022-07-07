@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+        var book = {
+            title: "수미네 반찬",
+            publisher: "성안당",
+            author: "김수미",
+            price: 15300,
+            info: {
+                date: "2010년 1월 30일",
+                ISBN10: 8970506470,
+                size: "188*243mm"
+            },
+
+            print: function () {
+                var list = "<table><thead><tr><th>항목(속성:property)</th><th>내용(값:value)</th></tr></thead><tbody>";
+                for (var p in this) {
+                    if (p != 'print') {
+                        if (typeof (this[p]) != "object") {
+                            list += "<tr><td>book." + p + "</td><td>" + this[p];
+
+                            if (p == "price")
+                                list += "원";
+
+                            list += "</td></tr>";
+                        } else {
+                            for (var q in this[p]) {
+                                list += "<tr><td>book." + p + "." + q + "</td><td>" + this[p][q] + "</td></tr>";
+                            }
+                        }
+                    }
+                }
+
+                list += "</tbody></table>";
+                document.body.innerHTML = list;
+            }
+        }
+
+        book.print();
+
+    </script>
+
+</body>
+
+</html>

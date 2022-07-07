@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var day = date.getDate();
+
+        var hour24 = date.getHours();
+
+        var hour = function (hour24) {
+            if (hour24 != 12)
+                return hour24 % 12;
+            else
+                return hour24;
+        }
+
+        var min = date.getMinutes();
+
+        var ampm = function () {
+            if (hour24 >= 12)
+                return "오후";
+            else
+                return "오전";
+        };
+        var second = date.getSeconds();
+        setInterval(
+            function () {
+                var time = year + ". " + month + ". " + day + " " + ampm() + " " + hour(hour24) + ":" + min + ":" + second;
+                document.body.innerHTML = time;
+                second += 1;
+            }, 1000
+        );
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        tr:first-child {
+            background-color: lightgray;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <script>
+        var book1 = "자바스크립트";
+        var book2 = "HTML";
+        var book3 = "CSS";
+
+        var title;
+        var n = prompt("주문할 책 수량을 입력 하세요?[1이상]", "1");
+        var count = Number(n);
+
+        var book_list = "1. " + book1 + "\n" + "2. " + book2 + "\n" + "3. " + book3;
+
+        if (count >= 1) {
+            var list = "<table>";
+            list += "<thead><tr>";
+            list += "<th>순번</th><th>제목</th>";
+            list += "</tr></thead><tbody>";
+
+            for (var i = 1; i <= count; i++) {
+                var choice = prompt("책 제목을 번호로 선택하세요...\n" + book_list, "1");
+                if (choice == "1") {
+                    title = book1;
+                } else if (choice == "2") {
+                    title = book2;
+                } else if (choice == "3") {
+                    title = book3;
+                } else {
+                    alert("리스트에 없는 책을 선택하셨습니다.");
+                    i--;
+                    continue;
+                }
+
+                list += "<tr>";
+                list += "<td>" + i + "</td>";
+                list += "<td>" + title + "</td>";
+            }
+            list += "</tbody></table>";
+            document.body.innerHTML = list;
+        }
+
+
+    </script>
+</body>
+
+</html>

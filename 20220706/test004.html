@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                var outout = "";
+                $("input:checked").each(function (index, item) {
+                    output += $(this).val() + " ";
+                });
+                alert(output);
+            }, 5000);
+        });
+    </script>
+</head>
+
+<body>
+    <input type="checkbox" name="hobby" id="hobby1" value="공부">
+    <input type="checkbox" name="hobby" id="hobby1" value="게임">
+    <input type="checkbox" name="hobby" id="hobby1" value="운동">
+    <input type="checkbox" name="hobby" id="hobby1" value="등산">
+    <input type="checkbox" name="hobby" id="hobby1" value="낚시">
+</body>
+
+</html>

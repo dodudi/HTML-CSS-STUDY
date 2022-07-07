@@ -1,0 +1,50 @@
+<!--
+
+    사용자가 브라우저의 바탕화면(body)이나
+    html 태그 위에 마우스 오른쪽 버튼을 클릭할 때
+    출력되는 메뉴를 컨텍스트 라한다.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div:nth-child(1) {
+            border: 5px solid red;
+        }
+
+        div>div:nth-child(1) {
+            border: 5px solid orange;
+        }
+
+        h1 {
+            border: 5px solid yellow;
+        }
+
+        p {
+            border: 5px solid green;
+        }
+    </style>
+    <script>
+
+        document.oncontextmenu = function () {
+            return false;
+        }
+
+    </script>
+
+<body>
+    <h3>마우스 관련 이벤트 리스너</h3>
+    <hr>
+    <div>마우스 오른쪽 클릭을 금지합니다.</div>
+    <img src="" alt="">
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <script>
+        window.onclick = function () {
+            var img = document.createElement('img');
+            img.src = 'Penguins.jpg';
+            img.width = 300;
+            img.height = 330;
+            img.onclick = function () {
+                alert("이미지 경로는 " + img.src + "입니다.");
+            }
+
+            document.body.appendChild(img);
+
+            var img2 = document.createElement('img');
+            img2.src = 'Chrysanthemum.jpg';
+            
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <h1 id="header"> 나나</h1>
+
+    <h1></h1>
+</body>
+
+</html>

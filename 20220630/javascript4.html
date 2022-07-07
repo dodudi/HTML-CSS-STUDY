@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <script>
+        window.onclick = function () {
+            var createObject = document.createElement('img');
+            createObject.src = "Penguins.jpg";
+            createObject.width = 300;
+            createObject.height = 400;
+            createObject.onclick = function () {
+                alert("오예");
+            }
+        }
+
+        document.body.appendChild(createObject);
+
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

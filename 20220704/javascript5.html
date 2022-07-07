@@ -1,0 +1,60 @@
+<!--
+
+    디폴트 이벤트 : 일부 html 태그는 이미 이벤트 리스터가 존재한다.
+    이러한 것을 디폴트 이벤트라고 합니다.
+    예를 들어 a태그는 클릭하면 다른 페이지로 이동한다. 이것이 기본 이벤트이다.
+    submit도 누르면 새로고침되는것이 이벤트이다.
+
+    obj.onsubmit = function(){
+        return false;
+    }
+
+    event.preventDefault()를 사용하는 경우
+    <a href ="http://www.naver.com" onclick = "event.preventDefault()">
+    
+    function whenSubmit(){
+           return false;
+       }
+    
+    <form onsubmit = "return whenSubmit()">
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function check() {
+            var atag = document.getElementsByTagName("a");
+            var text = document.getElementById("text");
+
+            if (text.value == "하하") {
+                return false;
+            }
+
+            return true;
+        }
+
+    </script>
+</head>
+
+<body>
+    <form action="">
+
+        <input type="text" id="text">
+
+    </form>
+
+    <!--a를 클릭할 떄의 default행동  취소.-->
+    <a href="javascript1.html" onclick="return check()">네이버로 이동이 안됩니다.</a>
+
+</body>
+
+</html>

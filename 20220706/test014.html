@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+
+    <script src="../jquery.js"></script>
+    <script>
+        var xml = '';
+        xml += '<friends>';
+        xml += '<friend>';
+        xml += '<name>오바마</name>';
+        xml += '<language>영어</language>';
+        xml += '</friend>';
+        xml += '<friend>';
+        xml += '<name>하니</name>';
+        xml += '<language>중국어</language>';
+        xml += '</friend>';
+        xml += '<friend>';
+        xml += '<name>세종대왕</name>';
+        xml += '<language>한국어</language>';
+        xml += '</friend>';
+        xml += '</friends>';
+        $(document).ready(function () {
+            var xmlDoc = $.parseXML(xml);
+            var output = '';
+            $(xmlDoc).find('friend').each(function (index, item) {
+                console.log($(item).eq(0).contents());
+                var tag = "<div><h1>" + $(item).find('name').text() + "</h1><p>" + $(item).find('language').val() + "</div>";
+                document.write(tag);
+            });
+            $("body").html(output);
+        });
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

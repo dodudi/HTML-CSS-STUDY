@@ -1,0 +1,63 @@
+<!--
+
+    사용자가 브라우저의 바탕화면(body)이나
+    html 태그 위에 마우스 오른쪽 버튼을 클릭할 때
+    출력되는 메뉴를 컨텍스트 라한다.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div:nth-child(1) {
+            border: 5px solid red;
+        }
+
+        div>div:nth-child(1) {
+            border: 5px solid orange;
+        }
+
+        h1 {
+            border: 5px solid yellow;
+        }
+
+        p {
+            border: 5px solid green;
+        }
+    </style>
+
+<body>
+    <div>모든 체크박스 선택/해제</div>
+    <hr>
+    <form action="">
+
+        <label for=""><input type="checkbox" name="all" value="모두 선택/해제">All</label>
+        <label for=""><input type="checkbox" name="icon" value="image1">image1</label>
+        <label for=""><input type="checkbox" name="icon" value="image2">image2</label>
+        <label for=""><input type="checkbox" name="icon" value="image3">image3</label>
+
+    </form>
+    <script>
+
+        var all = document.getElementsByName('all');
+        all[0].addEventListener('click', show);
+
+        function show(e) {
+            var img1 = document.getElementsByName('icon');
+            for (var i = 0; i < img1.length; i++) {
+                console.log(this.checked);
+                img1[i].checked = this.checked;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

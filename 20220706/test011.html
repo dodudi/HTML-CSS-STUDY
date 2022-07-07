@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+
+    <script src="../jquery.js"></script>
+    <script>
+        $.noConflict(); //더 이상 jQuery의 식별자로 $를 사용할 수 없습니다.
+        var q = jQuery; //jQuery 객체를 다른 변수에 저장해서 사용합니다.
+
+        q(document).ready(function () {
+            q('h1').addClass('append');
+        });
+    </script>
+</head>
+
+<body>
+    <h1>1</h1>
+    <h1>2</h1>
+    <h1>3</h1>
+    <h1>4</h1>
+    <h1>5</h1>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <style>
+
+
+  </style>
+</head>
+
+<body>
+  <script>
+
+    document.write(' 1<"2" : ' + (1 < "2") + "<br>"); // true
+
+    //숫자와 문자열이 숫자가 아닌 경우 NaN  둘중 하나가 NaN이면 false
+    document.write('"a" >  1 ' + ("a" > 1) + "<hr>")  //false
+
+    document.write('1 == "2" : ' + (1 == "2") + "<br>"); // false
+    document.write('1 == "2" : ' + (1 == "1") + "<br>"); // true
+
+
+    document.write("Number('A') : " + Number('A') + "<br>"); // NaN
+    document.write('1=="A" : ' + (1 == "A") + "<hr>"); // false
+
+
+    document.write('1 === "1" : ' + (1 === "1") + "<br>"); // false
+    document.write('1 === "1" : ' + (1 == "1") + "<br>"); // false
+    document.write('"1" === "2" : ' + ("1" == "1") + "<br>"); // true
+
+    if (0) {
+      document.write("if(0) true 입니다. <br>");
+    }
+    else {
+      document.write("if(1) false 입니다. <br>");
+    }
+
+    if ('')
+      document.write("if('') true 입니다. <br>");
+
+    if ('호호')
+      document.write("if('호호') true 입니다. <br>");
+
+    if (null)
+      document.write("if(null) true 입니다. <br>");
+
+    var a = {};
+    if (a)
+      document.write("if({}) true 입니다. <br>");
+
+    var s = 'S';
+    if (Number(s))
+      document.write(Number(s) + " true 입니다. <br>");
+  </script>
+
+
+
+
+</body>
+
+</html>

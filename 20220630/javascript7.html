@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button {
+
+            width: 100px;
+            height: 30px;
+            background-color: green;
+            color: white;
+            border: none;
+        }
+
+        button:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            cursor: not-allowed;
+        }
+
+        button:enabled {
+            cursor: pointer;
+            background-color: green;
+        }
+    </style>
+
+    <script>
+
+        var data = ['penguins.jpg', 'Jellyfish.jpg'];
+        var img = document.getElementById('flower');
+        var index = 0;
+
+        window.onload = function () {
+            setInterval(() => {
+                fun1();
+            }, 1000);
+        }
+
+        var fun1 = function () {
+            var path = data[index];
+            this.src = path;
+
+            index++;
+
+            if (index % data.length == 0)
+                index = 0;
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+
+        var changeFlower = document.getElementById('flower');
+        var data = ['penguins.jpg', 'Jellyfish.jpg'];
+        setInterval(() => {
+
+        }, interval);
+
+        start = setInterval();
+
+        var rr = setInterval(change, 1000);
+        var start = document.getElementById('start');
+        var stop = document.getElementById('stop');
+
+        stop.disabled = true;
+        stop.style.backgroundColor = "gray";
+
+        start.onclick = function () {
+            start_time = setInterval(change, 1000);
+            start.dsiabled = true;
+            //start.style.backgroundColor = "gray";
+
+            stop.disabled = false;
+            //stop.style.backgroundColor = "green";
+        }
+        
+        stop.onclick = function () {
+            clearInterval(start_time);
+            stop.disabled = true;
+            //stop.style.backgroundColor = "gray";
+
+            start.disabled = false;
+            //start.style.backgroundColor = "green";
+        }
+
+    </script>
+
+    이미지를 클릭하면 이미지가 바뀝니다. <br>
+    <img src="Penguins.jpg" id="flower" width="500px" height="500px">
+
+    <br><button id="start">start</button>
+    <br><button id="stop">stop</button>
+
+
+</body>
+
+</html>

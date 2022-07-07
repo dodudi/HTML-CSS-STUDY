@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function open_window() {
+            var url = window.prompt("url", "http://www.naver.com");
+            if (url) {
+                win = window.open(url);
+            }
+        };
+
+    </script>
+
+    <button onclick="open_window();">새로운 창(탭 윈도우)를 엽니다.</button>
+    <button onclick="win.close();">연 창을 닫습니다.</button>
+</body>
+
+
+</html>
