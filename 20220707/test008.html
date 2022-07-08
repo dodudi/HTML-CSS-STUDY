@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                //$('.page').show(5000);
+                //$('.page').hide('slow');
+                //$('.page').toggle(5000);
+                //$('.page').fadeToggle(5000);
+                $('.page').slideToggle(5000);
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <button>show</button>
+    \<div class="page">
+        <h1>졸린가요"</h1>
+        <p>밤에 푹 자라</p>
+    </div>
+</body>
+
+</html>

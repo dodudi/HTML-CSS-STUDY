@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('#all-check').change(function () {
+                console.log($(this).is(':checked'));
+                $('#check-item>input:checkbox').prop('checked', $(this).is(':checked'));
+            });
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+    <label for="">
+
+        <input type="checkbox" id="all-check"> All
+
+    </label>
+
+    <div id="check-item">
+
+        <input type="checkbox">
+        <label for="">A option</label>
+
+        <input type="checkbox">
+        <label for="">B option</label>
+
+        <input type="checkbox">
+        <label for="">C option</label>
+    </div>
+</body>
+
+</html>

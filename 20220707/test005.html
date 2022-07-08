@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../jquery.js"></script>
+
+    <script>
+        $(function () {
+            $('a').click(function (event) {
+                $(this).css('background-color', 'blue');
+                //아래 두줄 과같은 효과
+                return false;
+                // event.preventDefault();  //기본이벤트제거
+                // event.stopPropagation(); //부모호출제거
+            });
+
+            $('div').click(function () {
+                $(this).css('background-color', 'orange');
+            });
+        });
+    </script>
+    <style>
+        * {
+            margin: 5px;
+            padding: 5px;
+
+            border: 3px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <a href="test004.html">트리거 예제</a> div태그
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('#my-form').submit(function (event) {
+                var count = 0;
+
+                var name = $.trim($('#name').val());
+
+                if (name == '') {
+                    count++;
+                    var message = "아이디를 입력하세요.";
+                    $('#name').next().html(message);
+                } else {
+                    $('#name').next().html('');
+                }
+
+                var password = $.trim($('#password').val());
+                if (password == '') {
+                    count++;
+                    var message = "비밀번호를 입력하세요.";
+                    $('#password').next().html(message);
+                } else {
+                    $('#password').next().html('');
+                }
+
+                if (count != 0)
+                    return false;
+
+                return true;
+            });
+
+            // $('input[type=submit]').click(function () {
+            //     var check1 = check();
+            //     $('form').attr('onsubmit', check1);
+            //     return check();
+            // });
+
+            // function check() {
+            //     var name = $('#name').val();
+            //     var pass = $('#password').val();
+
+            //     var check1 = true;
+
+            //     var span = $('span:eq(0)');
+            //     if (name.trim() == '') {
+            //         span.attr('color', 'red');
+            //         span.text("아이디를 입력해 주세요.");
+            //         check1 = false;
+            //     } else {
+            //         span.text('');
+            //     }
+
+            //     var span = $('span:eq(1)');
+            //     if (pass.trim() == '') {
+            //         span.attr('color', 'red');
+            //         span.text("비밀번호를 입력해 주세요.");
+            //         check1 = false;
+            //     } else {
+            //         span.text('');
+            //     }
+
+            //     return check1;
+            // }
+        });
+
+    </script>
+
+    <style>
+        div {
+            width: 450px;
+            margin: 0 auto;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        label {
+            font-weight: bold
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        span {
+            color: red
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+
+        <form id="my-form" action="#">
+
+            <p>
+
+                <label for="name">User Name</label>
+                <input type="text" name="name" id="name">
+                <span></span>
+
+            </p>
+
+            <p>
+
+                <label for="password">User Password</label>
+                <input type="password" name="password" id="password">
+                <span></span>
+
+            </p>
+
+            <input type="submit" value="Submit">
+
+        </form>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../jquery.js"></script>
+
+    <script>
+        $(function () {
+
+            $('h1').click(function () {
+                $(this).html(function (index, item) {
+                    return item + "*";
+                })
+
+                $('#end').attr("disabled", true);
+
+                $('#start').click(function (event) {
+                    $(this).attr('disabled', true).val('시작중...');
+                    $('#end').attr('disabled', false);
+                    repeat = setInterval(function () {
+                        $('h1:last').trigger('click');
+                    }, 1000);
+                });
+
+                $('#end').click(function () {
+                    $('#start').attr('disabled', false).val('트리거 시작');
+                    $(this).attr('disabled', true);
+                    clearInterval(repeat);
+                });
+            })
+
+            $('#end').click(function () {
+                alert("트리거 종료");
+                $('h1:last').off(); //이벤트제거
+            });
+        });
+    </script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        div {
+            margin: 5px;
+            padding: 3px;
+            border: 3px solid black;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 100px;
+            height: 40px;
+            color: white;
+            font-weight: bold;
+            border: none;
+            outline: none;
+        }
+
+        input:hover {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        input:disabled:hover {
+            opacity: 1;
+            cursor: not-allowed;
+        }
+
+        #start {
+            background: green;
+        }
+
+        #start:disabled,
+        #end:disabled {
+            background: gray;
+        }
+
+        #end {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Header1</h1>
+        <p>Paragraph1</p>
+    </div>
+    <input type="button" value="트리거 종료" id="end">
+</body>
+
+</html>
