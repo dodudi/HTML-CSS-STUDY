@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+
+    Bootstrap 4에는 사이트 내용을 포함하는 요소가 포함되어 있어야한다.
+    선택할 수 있는 두개의 컨테이너 클래스가 있다.
+
+    1. .container   클래스는 반응 형 고정 폭 컨테이너를 제공합니다.
+    2. .container-fluid 클래스는 뷰포트의 전체 너비에 걸쳐 전체 너비 컨테이너를 제공합니다.
+
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="../jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $('li').on("click", function () {
+                $(".active").removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h4>페이지네이션</h4>
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">&lt;&lt;</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item active"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item"><a class="page-link" href="#">&gt;&gt;</a></li>
+        </ul>
+    </div>
+
+
+</body>
+
+</html>
